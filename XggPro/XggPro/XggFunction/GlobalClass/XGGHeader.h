@@ -32,7 +32,7 @@
 #define MyredirectUri @"https://github.com/bairdweng"
 #define QQAppID @"1105810090" //16进制 41E6A077
 #define QQappSecret @"lRgWi9XP8wfNyzTZ"
-#define XggUrl @"http://123.207.47.17/xgg"
+#define XggUrl @"http://xggserve.com/xgg"
 #define XGGplaceholderImage [UIImage imageNamed:@"defaultface"]
 #import "WeiboSDK.h"
 #import "XggNetworking.h"
@@ -59,5 +59,5 @@
 #define NAVIGARIONBTITLECOLOR [UIColor whiteColor]
 #define XGGBLCAKGROUNDCOLOR [UIColor colorWithHexString:@"f2f2f3"]
 #define XGGLINEBLCAKGROUNDCOLOR [UIColor colorWithHexString:@"e3e3e3"]
-#define MYHOST @"http://123.207.47.17"
+#define MYHOST @"http://xggserve.com"
 #endif /* XGGHeader_h */
