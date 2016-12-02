@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ABA40FD1DF1D5CF0041E6F8 /* testModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABA40FC1DF1D5CF0041E6F8 /* testModel.m */; };
 		990F15791DC82C5000B5CDBC /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990F15771DC82C5000B5CDBC /* AddUserViewController.m */; };
 		990F157E1DC82FAA00B5CDBC /* FRDLivelyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 990F157D1DC82FAA00B5CDBC /* FRDLivelyButton.m */; };
 		990F15811DC832E300B5CDBC /* XggNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 990F15801DC832E300B5CDBC /* XggNavigationController.m */; };
@@ -197,6 +198,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ABA40FB1DF1D5CF0041E6F8 /* testModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testModel.h; sourceTree = "<group>"; };
+		3ABA40FC1DF1D5CF0041E6F8 /* testModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testModel.m; sourceTree = "<group>"; };
 		990F15761DC82C5000B5CDBC /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		990F15771DC82C5000B5CDBC /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		990F157C1DC82FAA00B5CDBC /* FRDLivelyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRDLivelyButton.h; sourceTree = "<group>"; };
@@ -1109,6 +1112,8 @@
 			children = (
 				99E4CC601DBA671C00D7E1DF /* AppDelegate.h */,
 				99E4CC611DBA671C00D7E1DF /* AppDelegate.m */,
+				3ABA40FB1DF1D5CF0041E6F8 /* testModel.h */,
+				3ABA40FC1DF1D5CF0041E6F8 /* testModel.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1709,6 +1714,7 @@
 				99388DE81DCDC89700347A09 /* areaItem.m in Sources */,
 				99EE1BAD1DBB416B0059197E /* IQTextView.m in Sources */,
 				99EE1BB41DBB416B0059197E /* MASCompositeConstraint.m in Sources */,
+				3ABA40FD1DF1D5CF0041E6F8 /* testModel.m in Sources */,
 				99EE1BA21DBB416B0059197E /* DTTimePeriodCollection.m in Sources */,
 				99EE1BD51DBB416B0059197E /* MJRefreshBackStateFooter.m in Sources */,
 				99388DEC1DCDC89700347A09 /* KwdatePickView.m in Sources */,
