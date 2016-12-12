@@ -8,7 +8,7 @@
 
 #import "XggMainViewController.h"
 #import "XGGHeader.h"
-#import "FunctionCell.h"
+#import "XGGFunctionCell.h"
 #import "XggWebViewController.h"
 @interface XggMainViewController ()<UIWebViewDelegate>
 @property(nonatomic,weak)UIWebView *dataWebView;
@@ -43,7 +43,6 @@
     NSString *urlStr = [request.URL absoluteString];
     NSArray *urlAry = [urlStr componentsSeparatedByString:@"::"];
     if ([urlAry count]==2){
-        
         XggWebViewController *XggWebView = [[XggWebViewController alloc]init];
         XggWebView.WebURL = [NSURL URLWithString:urlAry[1]];
         XggWebView.hidesBottomBarWhenPushed = YES;
@@ -60,7 +59,6 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:self.WebURL];
     [self.dataWebView loadRequest:request];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

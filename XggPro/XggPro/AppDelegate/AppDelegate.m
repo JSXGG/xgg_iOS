@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XGGHeader.h"
-#import "userItem.h"
+#import "FMUserItem.h"
 #import "LoginfoViewController.h"
 #import "XggTabBarController.h"
 @interface AppDelegate ()

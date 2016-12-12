@@ -154,7 +154,7 @@
     Mb.contentColor = [UIColor whiteColor];
     Mb.label.font = [UIFont systemFontOfSize:14];
     Mb.animationType = MBProgressHUDAnimationZoomIn;
-    Mb.bezelView.style = MBProgressHUDBackgroundStyleBlur;
+    Mb.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     return Mb;
 }
 -(MBProgressHUD *)GetDefaultHUBInWindow{
@@ -163,7 +163,7 @@
     Mb.contentColor = [UIColor whiteColor];
     Mb.label.font = [UIFont systemFontOfSize:14];
     Mb.animationType = MBProgressHUDAnimationZoomIn;
-    Mb.bezelView.style = MBProgressHUDBackgroundStyleBlur;
+    Mb.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
     return Mb;
 }
 
