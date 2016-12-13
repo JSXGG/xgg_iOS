@@ -8,9 +8,6 @@
 
 #ifndef XGGHeader_h
 #define XGGHeader_h
-
-
-
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
 #define SandBoxpath(Name)[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@",Name]]
