@@ -54,8 +54,8 @@
     self.TempleImage = nil;
     __weak typeof(self)WeakSelf = self;
     UITableView *TableView = UITableView.new;
-    [TableView registerNib:[UINib nibWithNibName:@"adduserCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"adduserCell"];
-    [TableView registerNib:[UINib nibWithNibName:@"adduserfaceCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"adduserfaceCell"];
+    [TableView registerNib:[UINib nibWithNibName:@"FMAdduserCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FMAdduserCell"];
+    [TableView registerNib:[UINib nibWithNibName:@"FMAdduserfaceCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FMAdduserfaceCell"];
     TableView.delegate = self;
     TableView.dataSource = self;
     [self.view addSubview:TableView];
@@ -111,7 +111,7 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
-        FMAdduserfaceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"adduserfaceCell" forIndexPath:indexPath];
+        FMAdduserfaceCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMAdduserfaceCell" forIndexPath:indexPath];
         FMaddUserItem *item = self.listItems[indexPath.row];
         cell.titleLabel.text =item.Title;
         if (self.TempleImage) {
@@ -124,7 +124,7 @@
         cell.faceimageView.layer.masksToBounds = YES;
         return cell;
     }
-    FMAdduserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"adduserCell" forIndexPath:indexPath];
+    FMAdduserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMAdduserCell" forIndexPath:indexPath];
     FMaddUserItem *item = self.listItems[indexPath.row];
     cell.TitleLabel.text = item.Title;
     cell.ContentLabel.text = item.Content;

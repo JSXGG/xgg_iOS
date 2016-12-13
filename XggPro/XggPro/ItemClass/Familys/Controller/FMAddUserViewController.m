@@ -48,7 +48,7 @@
     [self setRightBarItemIcon:nil butItemTitle:@"完成" addTarget:self action:@selector(ClickOnthefinish)];
     
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-    [tableView registerNib:[UINib nibWithNibName:@"adduserCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"adduserCell"];
+    [tableView registerNib:[UINib nibWithNibName:@"FMAdduserCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FMAdduserCell"];
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];
@@ -121,13 +121,13 @@
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    FMAdduserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"adduserCell" forIndexPath:indexPath];
+    FMAdduserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMAdduserCell" forIndexPath:indexPath];
     FMaddUserItem *item = self.listItems[indexPath.row];
     cell.TitleLabel.text = item.Title;
     cell.ContentLabel.text = item.Content;
     return cell;
 }
--(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

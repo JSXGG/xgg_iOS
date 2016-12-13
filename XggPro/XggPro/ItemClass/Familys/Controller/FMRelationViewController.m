@@ -39,7 +39,7 @@
     [self setLeftBtn];
     self.title = @"关系";
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
-    [tableView registerNib:[UINib nibWithNibName:@"adduserCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"adduserCell"];
+    [tableView registerNib:[UINib nibWithNibName:@"FMAdduserCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FMAdduserCell"];
     tableView.delegate = self;
     tableView.dataSource = self;
     [self.view addSubview:tableView];
@@ -61,12 +61,12 @@
     // Do any additional setup after loading the view.
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    FMAdduserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"adduserCell" forIndexPath:indexPath];
+    FMAdduserCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMAdduserCell" forIndexPath:indexPath];
     FMRelationItem *item = self.listItems[indexPath.row];
     cell.TitleLabel.text = item.relation_ch;
     return cell;
 }
--(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 44;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
