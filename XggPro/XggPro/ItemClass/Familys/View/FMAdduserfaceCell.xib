@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGk-0i-btT">
@@ -26,15 +26,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J3f-UP-YHb">
-                        <rect key="frame" x="238.5" y="5" width="66.5" height="66.5"/>
+                        <rect key="frame" x="248.5" y="10" width="56.5" height="56.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="J3f-UP-YHb" secondAttribute="height" multiplier="11:11" id="mDh-sa-89Z"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="J3f-UP-YHb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="5j9-oy-E9u"/>
-                    <constraint firstAttribute="bottom" secondItem="J3f-UP-YHb" secondAttribute="bottom" constant="5" id="5l9-DY-adx"/>
+                    <constraint firstItem="J3f-UP-YHb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5j9-oy-E9u"/>
+                    <constraint firstAttribute="bottom" secondItem="J3f-UP-YHb" secondAttribute="bottom" constant="10" id="5l9-DY-adx"/>
                     <constraint firstAttribute="bottom" secondItem="aGk-0i-btT" secondAttribute="bottom" constant="15" id="JZv-mu-SQf"/>
                     <constraint firstItem="aGk-0i-btT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Sv9-FM-2e7"/>
                     <constraint firstAttribute="trailing" secondItem="J3f-UP-YHb" secondAttribute="trailing" constant="15" id="h6F-2E-FZh"/>
