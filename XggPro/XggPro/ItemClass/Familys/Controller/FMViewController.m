@@ -190,10 +190,10 @@
             NSArray *data = dic[@"data"];
             for (int i = 0; i<[data count]; i++) {
                 FMUserItem *item  = [FMUserItem mj_objectWithKeyValues:data[i]];
-                item.Mainuid = [self.uid integerValue];
+                item.Mainuid = [WeakSelf.uid integerValue];
                 [item save];
             }
-            [self reloadViewModel];
+            [WeakSelf reloadViewModel];
         }
     } WithFailurBlock:^(NSError *error){
         [WeakSelf.TableView.mj_header endRefreshing];
@@ -266,6 +266,35 @@
             FMVC.uid = [NSString stringWithFormat:@"%ld",(long)item.uid];
             [self.navigationController pushViewController:FMVC animated:YES];
         }
+    }
+}
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete){
+        FMUserItem *item = self.listItems[indexPath.row];
+        [self SetShowLoadingState:@"正在删除"];
+        __weak typeof(self)WeakSelf = self;
+        NSString *URL = [NSString stringWithFormat:@"%@/deluser",XggUrl];
+        NSMutableDictionary *Params = [[PublicParameters sharedManager]GetPublicParameters];
+        [Params setObject:[NSString stringWithFormat:@"%ld",(long)item.uid] forKey:@"uid"];
+        [[XggNetworking sharedManager]requestWithMethod:POST WithPath:URL WithParams:Params WithSuccessBlock:^(NSDictionary *dic){
+            [WeakSelf processingErrorMessage:dic];
+            [WeakSelf.TableView.mj_header endRefreshing];
+            int result = [dic[@"result"]intValue];
+            if (result == 1){
+                [WeakSelf setShowMessage:@"删除成功"];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [WeakSelf getfamilylist];
+                });
+            }
+            else{
+                [WeakSelf.TableView reloadData];
+            }
+        } WithFailurBlock:^(NSError *error){
+            [WeakSelf networkAnomalies];
+        }];
     }
 }
 /**

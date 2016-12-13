@@ -56,7 +56,6 @@
     UITableView *TableView = UITableView.new;
     [TableView registerNib:[UINib nibWithNibName:@"adduserCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"adduserCell"];
     [TableView registerNib:[UINib nibWithNibName:@"adduserfaceCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"adduserfaceCell"];
-
     TableView.delegate = self;
     TableView.dataSource = self;
     [self.view addSubview:TableView];
@@ -72,7 +71,6 @@
     NSArray *titleArray = @[@"头像",@"姓",@"名",@"昵称",@"生日",@"真实生日",@"农历生日",@"电话",@"微信",@"祖籍",@"现居住地",@"职业",@"个人简介"];
     NSArray *ziduanArray = @[@"face",@"firstname",
                              @"lastname",@"usrname",@"birthday",@"actualbirthday",@"lunarbirthday",@"mobile",@"wexin",@"hometown",@"livecity",@"professional",@"introduction"];
-
     self.listItems = [[NSMutableArray alloc]init];
     for (int i = 0; i<[titleArray count]; i++) {
         FMaddUserItem *userItem = [[FMaddUserItem alloc]init];
@@ -273,7 +271,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Navigation
 
